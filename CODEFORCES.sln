@@ -1,31 +1,68 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CODEFORCES", "CODEFORCES\CODEFORCES.vcxproj", "{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Debug|x64.ActiveCfg = Debug|x64
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Debug|x64.Build.0 = Debug|x64
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Debug|x86.ActiveCfg = Debug|Win32
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Debug|x86.Build.0 = Debug|Win32
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Release|x64.ActiveCfg = Release|x64
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Release|x64.Build.0 = Release|x64
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Release|x86.ActiveCfg = Release|Win32
-		{95ABB6FE-8026-4374-98A8-5C45DBFA44D7}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5848DE82-227B-4DB0-977D-FE44ED2D169E}
-	EndGlobalSection
-EndGlobal
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int x, y, z;
+	cin >> x >> y >> z;
+	int frst = 0;
+	int scnd = 0;
+	int thrd = 0;
+	cout << "the ascending order is: " << endl;
+	/*the smallest number*/
+	if (y == z && y > x)
+		cout << "the second number and the third number are equal "<< y << endl;
+	if (y > x && z > x)
+		cout << x << endl;
+	else if (x > y && z > y)
+		cout << y << endl;
+	else if (y > z && x > z)
+		{
+			cout << z << endl;
+		}
+
+	if (y == z && y < x)
+		cout << "the second number and the third number are equal "<< y << endl;
+	 
+	
+	
+	/*the middle number*/
+	if (x == z && x < y)//equal numbers
+		cout << "first number and third number are equal " << x << endl;
+	if (x > y && y > z || z > y && y > x)
+		cout << y << endl;
+	else if (y > x && x > z || z > x && x > z)
+		cout << x << endl;
+	else if (y > z && z > x || x > z && z > y)
+		{
+			cout << z << endl;
+		}
+	if (x == z && x > y)//equal numbers
+		cout << "first number and third number are equal " << x <<endl;
+	/////////////////////
+	/*the last number*/
+	if (x == y && x < z)//equal numbers
+		cout << "first number and second number are equal "<< x << endl;
+	if (x > y && x > z)
+		cout << x << endl;
+	else if (y > x && y > z)
+		cout << y << endl;
+	else if (z > x && z > y)
+		{
+			cout << z << endl;
+		}
+	if (x == y && x > z)//equal numbers
+		cout << "first number and second number are equal "<< x << endl;
+	/////////////////////
+	/*if equal numbers*/
+	if (x == y == z)
+		cout << "all are equal"; 
+	
+		
+	////////////////////
+
+
+system("pause>0");
+}
+
